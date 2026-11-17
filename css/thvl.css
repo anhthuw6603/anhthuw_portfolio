@@ -1,0 +1,1084 @@
+
+/* ===== THVL PROJECT PAGE ===== */
+
+.thvl-page {
+  --thvl-bg: #071a2d;
+  --thvl-panel: #0b2036;
+  --thvl-text: #f2f5fa;
+  --thvl-muted: #a8b8cb;
+  --thvl-line: rgba(210, 225, 245, 0.14);
+
+  background: var(--thvl-bg);
+  color: var(--thvl-text);
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  overflow: hidden;
+}
+
+.thvl-page *,
+.thvl-page *::before,
+.thvl-page *::after {
+  box-sizing: border-box;
+}
+
+.thvl-page img {
+  display: block;
+  max-width: 100%;
+}
+
+/* HERO */
+
+.thvl-hero {
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  padding: 55px 6%;
+  background:
+    linear-gradient(90deg, #071a2d 0%, rgba(7,26,45,.96) 45%,
+    rgba(7,26,45,.58) 100%),
+    url("../img/thvl.png") center right / cover no-repeat;
+  border-bottom: 1px solid var(--thvl-line);
+}
+
+.thvl-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.thvl-eyebrow {
+  margin: 0 0 12px;
+  color: #9eb7d5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.thvl-hero h1 {
+  margin: 0 0 18px;
+  color: var(--thvl-text);
+  font-size: clamp(29px, 4vw, 49px);
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: -.8px;
+}
+
+/* Logo ảnh: không nền, không khung */
+
+.thvl-logo {
+  width: 90px;
+  height: auto;
+  max-height: 45px;
+  margin: 0 0 13px;
+  object-fit: contain;
+  object-position: left center;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.thvl-unit {
+  margin: 0;
+  color: #d2dce9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.thvl-divider {
+  width: min(100%, 420px);
+  height: 1px;
+  margin: 20px 0 14px;
+  background: var(--thvl-line);
+}
+
+.thvl-role {
+  margin: 0;
+  color: #e4eaf2;
+  font-size: 13px;
+}
+
+.thvl-year {
+  position: absolute;
+  right: 6%;
+  bottom: 34px;
+  color: #a7c7ed;
+  font-size: clamp(20px, 3vw, 32px);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* SECTIONS */
+
+.thvl-section {
+  padding: 38px 6%;
+}
+
+.thvl-section-heading {
+  margin-bottom: 22px;
+}
+
+.thvl-section h2 {
+  margin: 0;
+  color: var(--thvl-text);
+  font-size: clamp(21px, 2.5vw, 29px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* WORK CARDS */
+
+.thvl-work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.thvl-work-card {
+  min-width: 0;
+  padding: 0 0 12px;
+  overflow: hidden;
+  background: var(--thvl-panel);
+  border: 1px solid var(--thvl-line);
+  border-radius: 9px;
+}
+
+.thvl-work-card img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  background: #10253b;
+}
+
+.thvl-work-card span {
+  display: block;
+  padding: 10px 12px 0;
+  color: #a8c6eb;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.thvl-work-card h3 {
+  margin: 3px 12px 0;
+  color: var(--thvl-text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* GALLERY */
+
+.thvl-gallery-section {
+  border-top: 1px solid var(--thvl-line);
+  border-bottom: 1px solid var(--thvl-line);
+}
+
+.thvl-gallery-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 22px;
+}
+
+.thvl-gallery-heading > p {
+  max-width: 370px;
+  margin: 0;
+  color: var(--thvl-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.thvl-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 150px;
+  gap: 7px;
+}
+
+.thvl-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  background: var(--thvl-panel);
+}
+
+.thvl-gallery .thvl-gallery-wide {
+  grid-column: span 2;
+}
+
+/* CONTRIBUTION */
+
+.thvl-contribution {
+  padding-top: 40px;
+  padding-bottom: 45px;
+}
+
+.thvl-contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 23px;
+}
+
+.thvl-contribution-grid article {
+  padding-right: 20px;
+  border-right: 1px solid var(--thvl-line);
+}
+
+.thvl-contribution-grid article:last-child {
+  border-right: 0;
+}
+
+.thvl-number {
+  color: #b8d0ee;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.thvl-contribution-grid p {
+  margin: 8px 0 0;
+  color: #c1cddd;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.thvl-footer {
+  margin: 0 6%;
+  padding: 18px 0 25px;
+  border-top: 1px solid var(--thvl-line);
+  color: #8195ac;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+  .thvl-hero {
+    min-height: 320px;
+    padding: 42px 6%;
+  }
+
+  .thvl-year {
+    right: 6%;
+    bottom: 16px;
+  }
+
+  .thvl-work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .thvl-work-card img {
+    height: 160px;
+  }
+
+  .thvl-gallery-heading {
+    display: block;
+  }
+
+  .thvl-gallery-heading > p {
+    margin-top: 12px;
+  }
+
+  .thvl-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 145px;
+  }
+
+  .thvl-contribution-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .thvl-contribution-grid article {
+    padding: 0 0 16px;
+    border-right: 0;
+    border-bottom: 1px solid var(--thvl-line);
+  }
+}
+
+@media (max-width: 420px) {
+  .thvl-hero h1 {
+    font-size: 28px;
+  }
+
+  .thvl-work-card img {
+    height: 130px;
+  }
+
+  .thvl-gallery {
+    grid-auto-rows: 115px;
+  }
+}
+/* Nút mở tài liệu trong thẻ dự án */
+.thvl-open {
+  display: block;
+  width: 100%;
+  padding: 0 0 12px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.thvl-open img {
+  display: block;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.thvl-open:hover img {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.thvl-open span,
+.thvl-open h3 {
+  display: block;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.thvl-open span {
+  padding-top: 10px;
+  color: #a8c6eb;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.thvl-open h3 {
+  margin-top: 3px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.thvl-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  padding: 40px 20px;
+  background: rgba(5, 15, 35, 0.96);
+  overflow-y: auto;
+  text-align: center;
+}
+
+.thvl-lightbox.active {
+  display: block;
+}
+
+.thvl-lightbox h3 {
+  color: #fff;
+  margin: 15px 0;
+}
+
+.thvl-lightbox iframe {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: 78vh;
+  margin: 0 auto;
+  border: 0;
+  background: #fff;
+}
+
+.thvl-close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  padding: 8px 14px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+/* Cửa sổ chọn tài liệu */
+.thvl-picker {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(3, 13, 28, 0.82);
+  backdrop-filter: blur(6px);
+}
+
+.thvl-picker.active {
+  display: flex;
+}
+
+.thvl-picker-box {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 34px;
+  border: 1px solid rgba(168, 198, 235, 0.25);
+  border-radius: 14px;
+  background: #0d2135;
+  color: #fff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.thvl-picker-label {
+  color: #a8c6eb;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.thvl-picker-box h3 {
+  margin: 10px 0 6px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.thvl-picker-box > p {
+  margin-bottom: 24px;
+  color: #aab8c8;
+  font-size: 13px;
+}
+
+.thvl-picker-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.thvl-file-option {
+  display: grid;
+  grid-template-columns: 32px 1fr 20px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 17px 14px;
+  border: 1px solid rgba(168, 198, 235, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.thvl-file-option:hover {
+  border-color: #a8c6eb;
+  background: rgba(168, 198, 235, 0.12);
+}
+
+.thvl-file-option span:first-child {
+  color: #a8c6eb;
+  font-size: 12px;
+}
+
+.thvl-file-option span:nth-child(2) {
+  font-size: 14px;
+}
+
+.thvl-file-option span:last-child {
+  color: #a8c6eb;
+}
+
+/* Canh lề nội dung bên trong nút dự án */
+.thvl-work-card .thvl-open {
+  padding: 0 0 16px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.thvl-work-card .thvl-open p {
+  margin: 6px 12px 0;
+  color: var(--thvl-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.thvl-work-card .thvl-open:focus-visible {
+  outline: 2px solid #a8c6eb;
+  outline-offset: -3px;
+}
+
+/* Ẩn các lựa chọn thuộc nhóm khác */
+.thvl-file-option[style*="display: none"] {
+  display: none !important;
+}
+
+/* BẢNG ẢNH HẬU TRƯỜNG */
+.thvl-gallery-open {
+  display: block;
+  width: 100%;
+  padding: 0 0 16px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.thvl-gallery-open img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.thvl-gallery-open span,
+.thvl-gallery-open h3 {
+  display: block;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.thvl-gallery-open span {
+  padding-top: 10px;
+  color: #a8c6eb;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.thvl-gallery-open h3 {
+  margin-top: 3px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.thvl-gallery-open p {
+  margin: 6px 12px 0;
+  color: #a8b8cb;
+  font-size: 12px;
+}
+
+.thvl-photo-board,
+.thvl-photo-viewer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  padding: 24px;
+  background: rgba(3, 13, 28, 0.94);
+}
+
+.thvl-photo-board.active,
+.thvl-photo-viewer.active {
+  display: flex;
+}
+
+.thvl-photo-board {
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.thvl-photo-board-box {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border: 1px solid rgba(168, 198, 235, 0.25);
+  border-radius: 14px;
+  background: #0b2036;
+  color: #f2f5fa;
+}
+
+.thvl-photo-board-box h3 {
+  margin: 8px 0;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.thvl-photo-board-desc {
+  margin-bottom: 22px;
+  color: #a8b8cb;
+  font-size: 13px;
+}
+
+.thvl-photo-board-close,
+.thvl-photo-viewer-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.thvl-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.thvl-photo-grid img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: zoom-in;
+  transition: transform .2s ease;
+}
+
+.thvl-photo-grid img:hover {
+  transform: scale(1.025);
+}
+
+.thvl-photo-viewer {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.thvl-photo-viewer img {
+  max-width: 82%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.thvl-photo-prev,
+.thvl-photo-next {
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,.08);
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .thvl-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .thvl-photo-grid img {
+    height: 130px;
+  }
+
+  .thvl-photo-board-box {
+    padding: 22px 16px;
+  }
+
+  .thvl-photo-viewer {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .thvl-photo-viewer img {
+    max-width: 75%;
+  }
+}
+.thvl-photo-board.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ẢNH TRONG BOARD DỰNG VIDEO */
+.thvl-video-item .thvl-edit-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+}
+
+.thvl-video-item .thvl-edit-image:hover {
+  transform: scale(1.02);
+}
+
+
+  #thvlVideoBoard .thvl-video-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+
+.thvl-page .thvl-video-gallery-open img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0 0 20px;
+}
+
+.thvl-page .thvl-video-gallery-open h3,
+.thvl-page .thvl-video-gallery-open h4,
+.thvl-page .thvl-video-gallery-open p {
+  width: 100%;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.thvl-page .thvl-video-gallery-open .project-number {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.thvl-page .thvl-video-gallery-open * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* GIỮ CHỮ MỤC 03 MÀU TRẮNG */
+.thvl-page .thvl-photo-board-box .thvl-picker-label,
+.thvl-page .thvl-photo-board-box h3,
+.thvl-page .thvl-photo-board-box .thvl-photo-board-desc {
+  color: #fff !important;
+}
+
+/* CARD 04 - ĐỒNG BỘ VỚI CARD 03 */
+.thvl-page .thvl-work-card .thvl-video-gallery-open {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 12px;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--thvl-text);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.thvl-page .thvl-work-card .thvl-video-gallery-open img {
+  display: block;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  background: #10253b;
+}
+
+.thvl-page .thvl-work-card .thvl-video-gallery-open span {
+  display: block;
+  padding: 10px 12px 0;
+  color: #a8c6eb;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.thvl-page .thvl-work-card .thvl-video-gallery-open h3 {
+  margin: 3px 12px 0;
+  color: var(--thvl-text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.thvl-page .thvl-work-card .thvl-video-gallery-open p {
+  margin: 4px 12px 0;
+  color: var(--thvl-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.thvl-page .thvl-work-card .thvl-video-gallery-open:hover {
+  background: transparent;
+  transform: none;
+}
+
+/* BOARD 04 - ĐỒNG BỘ GIAO DIỆN BOARD 03 */
+#thvlVideoBoard.thvl-photo-board {
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(3, 13, 28, 0.94);
+}
+
+#thvlVideoBoard .thvl-photo-board-box {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border: 1px solid rgba(168, 198, 235, 0.25);
+  border-radius: 14px;
+  background: #0b2036;
+  color: #f2f5fa;
+  box-shadow: none;
+}
+
+#thvlVideoBoard .thvl-picker-label,
+#thvlVideoBoard .thvl-photo-board-box h3,
+#thvlVideoBoard .thvl-photo-board-desc {
+  color: #fff !important;
+}
+
+#thvlVideoBoard .thvl-photo-board-desc {
+  color: #a8b8cb !important;
+}
+
+#thvlVideoBoard .thvl-photo-board-close {
+  color: #fff;
+}
+
+#thvlVideoBoard .thvl-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#thvlVideoBoard .thvl-video-item {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(210, 225, 245, 0.14);
+  border-radius: 9px;
+  background: #071a2d;
+  color: #f2f5fa;
+}
+
+#thvlVideoBoard .thvl-video-item h4,
+#thvlVideoBoard .thvl-video-item p {
+  color: #f2f5fa;
+}
+
+#thvlVideoBoard .thvl-video-item p {
+  color: #a8b8cb;
+}
+
+#thvlVideoBoard .thvl-video-item img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 650px) {
+  #thvlVideoBoard .thvl-photo-board-box {
+    padding: 22px 16px;
+  }
+
+  #thvlVideoBoard .thvl-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* VIDEO THUMBNAIL - ĐỒNG BỘ VỚI CÁC Ô HÌNH ẢNH */
+#thvlVideoBoard .thvl-video-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 6px;
+  background: #10253b;
+  cursor: pointer;
+}
+
+#thvlVideoBoard .thvl-video-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#thvlVideoBoard .thvl-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+}
+
+#thvlVideoBoard .thvl-video-thumb:hover img {
+  transform: scale(1.04);
+}
+
+#thvlVideoBoard .thvl-video-thumb img {
+  transition: transform 0.25s ease;
+}
+
+#thvlVideoBoard .thvl-video-item {
+  min-width: 0;
+  overflow: hidden;
+}
+
+#thvlVideoBoard .thvl-video-item p {
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+/* BẢNG PHÁT VIDEO */
+.thvl-video-player {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.thvl-video-player.active {
+  display: flex;
+}
+
+.thvl-video-player-box {
+  position: relative;
+  width: min(900px, 100%);
+  padding: 42px 16px 16px;
+  border: 1px solid #29445e;
+  border-radius: 12px;
+  background: #0b1928;
+}
+
+.thvl-video-player-box video {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  background: #000;
+}
+
+.thvl-video-player-close {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+}
+#thvlVideoBoard .thvl-video-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 6px;
+  background: #10253b;
+  cursor: pointer;
+}
+
+#thvlVideoBoard .thvl-video-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#thvlVideoBoard .thvl-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .75);
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.thvl-video-player {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, .88);
+}
+
+.thvl-video-player.active {
+  display: flex;
+}
+
+.thvl-video-player-box {
+  position: relative;
+  width: min(900px, 100%);
+  padding: 42px 16px 16px;
+  border: 1px solid #29445e;
+  border-radius: 12px;
+  background: #0b1928;
+}
+
+.thvl-video-player-box video {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  background: #000;
+}
+
+.thvl-video-player-close {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+/* Đảm bảo khung phát video nằm trên bảng video */
+#thvlVideoPlayer {
+  z-index: 100002;
+}
+
+#thvlVideoPlayer .thvl-video-player-box {
+  position: relative;
+  width: min(900px, 100%);
+  max-height: 90vh;
+}
+
+#thvlVideoPlayer video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  background: #000;
+}
+/* Chữ trắng - Hình ảnh tác nghiệp */
+#thvlPhotoBoard .thvl-photo-board-box .thvl-picker-label,
+#thvlPhotoBoard .thvl-photo-board-box h3,
+#thvlPhotoBoard .thvl-photo-board-box .thvl-photo-board-desc {
+    color: #fff !important;
+}
+

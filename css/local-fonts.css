@@ -1,0 +1,71 @@
+
+/* FONT LATO OFFLINE - KHONG CHAN */
+@font-face {
+    font-family: "Portfolio Sans";
+    src: url("../fonts/lato-regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Portfolio Sans";
+    src: url("../fonts/lato-semibold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Portfolio Sans";
+    src: url("../fonts/lato-bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700 900;
+    font-display: swap;
+}
+
+/* TOAN BO WEBSITE DUNG FONT KHONG CHAN */
+html,
+body,
+body *,
+button,
+input,
+textarea,
+select {
+    font-family: "Portfolio Sans", Arial, sans-serif !important;
+}
+
+/* TAT CA TIEU DE IN DAM */
+h1, h2, h3, h4, h5, h6,
+.hero h1,
+.section h2,
+.section h3,
+.section-title,
+.section-heading-row h2,
+.about-detail h3,
+.experience-item h3,
+.project-card h3,
+.portfolio-title,
+.project-meta,
+.brand,
+.site-nav nav a {
+    font-family: "Portfolio Sans", Arial, sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* TIEU DE CHINH */
+.hero h1 {
+    font-weight: 900 !important;
+}
+
+/* CAC TIEU DE MUC LON */
+.section h2,
+.section-title,
+.section-heading-row h2 {
+    font-weight: 900 !important;
+}
+
+/* DINH HUONG CHUYEN MON */
+.about-detail h3 {
+    font-weight: 900 !important;
+}
